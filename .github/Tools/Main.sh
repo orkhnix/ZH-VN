@@ -70,7 +70,7 @@ Xu_install(){
 if [ ! -e "/data/tools/ck/$1$pb" ];then
 ui_print "  $load $1..."
 ui_print
-Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
+Taive "https://github.com/orkhnix/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
 chmod 777 "$TMPDIR/$1.sh"
 cd /data/tools
 . "$TMPDIR/$1.sh"
