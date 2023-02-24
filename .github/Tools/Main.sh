@@ -1,4 +1,4 @@
-# Kakathic
+# Orkhnix
 
 ## Language text
 chon="Chọn"
