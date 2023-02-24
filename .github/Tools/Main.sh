@@ -70,8 +70,8 @@ Xu_install(){
 if [ ! -e "/data/tools/ck/$1$pb" ];then
 ui_print "  $load $1..."
 ui_print
-Taive "https://github.com/kakathic/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
-[ "$(grep -icm1 '#\ kakathic' $TMPDIR/$1.sh)" == 1 ] && chmod 777 "$TMPDIR/$1.sh" || abort "$error"
+Taive "https://github.com/orkhnix/Tools/raw/Vip/Library/$1/README.md" "$TMPDIR/$1.sh"
+[ "$(grep -icm1 '#\ orkhnix' $TMPDIR/$1.sh)" == 1 ] && chmod 777 "$TMPDIR/$1.sh" || abort "$error"
 cd /data/tools
 . "$TMPDIR/$1.sh"
 chmod -R 777 /data/tools/bin
@@ -380,7 +380,7 @@ ui_print "! Thông báo ủng hộ nhà phát triển
 
   Hết thời gian sẽ tự động reboot.
 "
-am start -a android.intent.action.VIEW -d "https://kakathic.github.io/ZH-VN/Support.html" >&2
+am start -a android.intent.action.VIEW -d "https://orkhnix.github.io/ZH-VN/Support.html" >&2
 
 ## Check the system devices
 [ "$ARCH" == "arm64" ] || abort "$error2
@@ -405,9 +405,9 @@ driver='$driver'
 Apilt='$Apilt'
 imei='$imei'
 
-thoigian1="$(Xem "https://raw.githubusercontent.com/orkhnix/ZH-VN-1/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
+thoigian1="$(Xem "https://raw.githubusercontent.com/orkhnix/ZH-VN/ZH/Code/$driver/$(echo -n "$Apilt" | base32 -w0)")"
 if [ "$(echo "$thoigian1" | grep -cm1 "HSD=")" != 1 ];then
-thoigian1="$(Xem "https://raw.githubusercontent.com/orkhnix/ZH-VN-1/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
+thoigian1="$(Xem "https://raw.githubusercontent.com/orkhnix/ZH-VN/ZH/Code/$driver/$(echo -n "$imei" | base32 -w0)")"
 fi
 
 if [ "$(echo "$thoigian1" | grep -cm1 "HSD=")" == 1 ];then
